@@ -26,6 +26,9 @@ export default function Blog() {
   return (
     <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
       <h1>{t.blog.title}</h1>
+      <p className="not-prose text-sm text-gray-900 mt-1">{t.blog.noteLine1}</p>
+      <p className="not-prose text-sm text-gray-900 mt-0">{t.blog.noteLine2}</p>
+      <p className="not-prose text-sm text-gray-400 mt-6 text-center">- {t.blog.disclaimer}</p>
 
       {/* Category filters */}
       <div className="not-prose flex flex-wrap gap-2 mt-6">
@@ -82,6 +85,7 @@ export default function Blog() {
           ))
         )}
       </ul>
+      <p className="not-prose text-sm text-gray-400 mt-8 text-center">- {t.blog.disclaimer}</p>
     </article>
   );
 }

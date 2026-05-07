@@ -50,6 +50,9 @@ export const translations = {
       },
       empty: "No posts yet.",
       edition: "Edition",
+      disclaimer: "Written with 0% AI +",
+      noteLine1: "I aim for this to be the real voice in my writing. I write my posts in English and Spanish separately.",
+      noteLine2: "They will generally share the same ideas and reflections, but communicated…differently",
     },
     germany: {
       title: "Germany",
@@ -104,6 +107,9 @@ export const translations = {
       },
       empty: "Sin publicaciones aún.",
       edition: "Edición",
+      disclaimer: "Escrito con 0% de IA +",
+      noteLine1: "I aim for this to be the real voice in my writing. I write my posts in English and Spanish separately.",
+      noteLine2: "They will generally share the same ideas and reflections, but communicated…differently",
     },
     germany: {
       title: "Alemania",
