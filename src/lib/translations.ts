@@ -30,6 +30,8 @@ export const translations = {
       contactTitle: "Get in Touch",
       contactBody:
         "Drop your preferred contact info here — email, social links, whatever works for you.",
+      linksTitle: "Links",
+      letterboxd: "Letterboxd",
     },
     gallery: {
       title: "Gallery",
@@ -47,6 +49,7 @@ export const translations = {
         space: "Space",
       },
       empty: "No posts yet.",
+      edition: "Edition",
     },
     germany: {
       title: "Germany",
@@ -81,6 +84,8 @@ export const translations = {
       contactTitle: "Contacto",
       contactBody:
         "Deja aquí tu información de contacto preferida — correo, redes sociales, lo que prefieras.",
+      linksTitle: "Links",
+      letterboxd: "Letterboxd",
     },
     gallery: {
       title: "Galería",
@@ -98,6 +103,7 @@ export const translations = {
         space: "Espacio",
       },
       empty: "Sin publicaciones aún.",
+      edition: "Edición",
     },
     germany: {
       title: "Alemania",

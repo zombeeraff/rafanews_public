@@ -29,7 +29,8 @@ export default function WhiteNights() {
           <h1 className="text-2xl font-bold tracking-tight text-gray-900 mt-0">{language === "es" ? "Noches Blancas" : "White Nights"}</h1>
           <p className="text-gray-400 text-sm mt-1 mb-0">{formatDate("2026-01-06", language)} · {t.blog.categories.reads}</p>
           <p className="text-gray-500 text-sm mt-2 mb-0">Fyodor Dostoevsky · 1848</p>
-          <p className="text-gray-500 text-sm mt-1 mb-0">{language === "es" ? "Rusia" : "Russia"}</p>
+          <p className="text-gray-500 text-sm mt-1 mb-0">Original: {language === "es" ? "Ruso" : "Russia"}</p>
+          <p className="text-gray-500 text-sm mt-1 mb-0">{t.blog.edition}: {language === "es" ? "Traducción al inglés" : "English Translation"}</p>
         </div>
       </div>
 
