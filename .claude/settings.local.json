@@ -15,7 +15,12 @@
       "Bash(./node_modules/.bin/next build:*)",
       "Bash(sips -g pixelWidth -g pixelHeight /Users/rafaelaguirre/rafanews_private/public/photos/DSC01576.JPG)",
       "Bash(git config:*)",
-      "Bash(sips -g pixelWidth -g pixelHeight /Users/rafaelaguirre/rafanews_private/public/photos/TheAndromedaStrain.jpg)"
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/rafaelaguirre/rafanews_private/public/photos/TheAndromedaStrain.jpg)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(kill 37633)",
+      "Bash(python3 -c ':*)",
+      "Bash(pkill -f \"node.*next\")",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
