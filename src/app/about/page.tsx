@@ -11,6 +11,18 @@ export default function About() {
 
       <p>{t.about.intro}</p>
 
+      <p>
+        <a href="https://boxd.it/jOKqr" target="_blank" rel="noopener noreferrer">
+          {t.about.letterboxd}
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.discogs.com/user/raguirre/collection" target="_blank" rel="noopener noreferrer">
+          {t.about.discogs}
+        </a>
+      </p>
+
       <h2>{t.about.whatIDoTitle}</h2>
       <p>{t.about.whatIDoBody}</p>
 
@@ -24,14 +36,6 @@ export default function About() {
       <h2>{t.about.contactTitle}</h2>
       <p>{t.about.contactBody}</p>
 
-      <h2>{t.about.linksTitle}</h2>
-      <ul>
-        <li>
-          <a href="https://boxd.it/jOKqr" target="_blank" rel="noopener noreferrer">
-            {t.about.letterboxd}
-          </a>
-        </li>
-      </ul>
     </article>
   );
 }

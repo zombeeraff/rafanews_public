@@ -32,6 +32,7 @@ export const translations = {
         "Drop your preferred contact info here — email, social links, whatever works for you.",
       linksTitle: "Links",
       letterboxd: "Letterboxd",
+      discogs: "Discogs",
     },
     gallery: {
       title: "Gallery",
@@ -89,6 +90,7 @@ export const translations = {
         "Deja aquí tu información de contacto preferida — correo, redes sociales, lo que prefieras.",
       linksTitle: "Links",
       letterboxd: "Letterboxd",
+      discogs: "Discogs",
     },
     gallery: {
       title: "Galería",
