@@ -1,7 +1,19 @@
+import fs from "fs";
+import path from "path";
+
 export default function FIFA26() {
+  const html = fs.readFileSync(
+    path.join(process.cwd(), "src/content/fifa26-tracker.html"),
+    "utf8"
+  );
+
   return (
-    <article className="max-w-2xl mx-auto px-6 py-12 sm:py-20 prose prose-gray prose-lg">
-      <h1>FIFA 26</h1>
-    </article>
+    <div style={{ height: "calc(100dvh - 64px)" }}>
+      <iframe
+        srcDoc={html}
+        style={{ width: "100%", height: "100%", border: "none" }}
+        title="Panini FIFA World Cup 2026 Tracker"
+      />
+    </div>
   );
 }
