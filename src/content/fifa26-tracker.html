@@ -86,6 +86,49 @@
 
   .sticker-thumb { width: 36px; height: 36px; border-radius: 4px; object-fit: cover; border: 1px solid #ddd; flex-shrink: 0; }
   .section-divider { padding: 10px 20px 4px; font-size: 11px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  /* ── Mobile ── */
+  @media (pointer: coarse) and (max-width: 1024px) {
+    .main { flex-direction: column; height: auto; }
+    .summary-panel { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid #ddd; max-height: none; overflow-y: visible; }
+    .detail-panel { display: none !important; }
+    .summary-header { grid-template-columns: 1fr 44px 44px 44px 1fr; }
+    .team-row { grid-template-columns: 1fr 44px 44px 44px 1fr; }
+    .grand-total { grid-template-columns: 1fr 44px 44px 44px 1fr; }
+    .controls { padding: 8px 12px; gap: 8px; }
+    .controls input { width: 100%; }
+    header h1 { font-size: 15px; }
+    .header-stats .stat { font-size: 18px; }
+  }
+
+  /* Mobile detail overlay */
+  #mobileDetail {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #f8f9fa;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  #mobileDetail.open { display: block; }
+  #mobileDetailClose {
+    position: fixed;
+    top: 12px;
+    right: 14px;
+    z-index: 1001;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
 </style>
 </head>
 <body>
@@ -377,8 +420,7 @@ function showDetail(sec) {
     <div class="detail-stat"><div class="val">${stats.mx}/${stats.total}</div><div class="lbl">🇲🇽 Collected (${pctMx}%)</div></div>
     <div class="detail-stat"><div class="val">${stats.total - stats.mx}</div><div class="lbl">🇲🇽 Missing</div></div>`;
 
-  const panel = document.getElementById('detailPanel');
-  panel.innerHTML = `
+  const _html = `
     <div class="detail-header">
       <h2>${withFlag(sec)}</h2>
       <div class="detail-stats">${detailStats}</div>
@@ -408,7 +450,15 @@ function showDetail(sec) {
       }).join('')}
     </div>`;
 
-  panel.scrollTop = 0;
+  if (isMobile()) {
+    document.getElementById('mobileDetailContent').innerHTML = _html;
+    document.getElementById('mobileDetail').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  } else {
+    const panel = document.getElementById('detailPanel');
+    panel.innerHTML = _html;
+    panel.scrollTop = 0;
+  }
 }
 
 function renderDupes() {
@@ -506,7 +556,19 @@ function renderCoca() {
 }
 
 
+function isMobile() { return window.matchMedia("(pointer: coarse)").matches; }
+
+function closeMobileDetail() {
+  document.getElementById('mobileDetail').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
 renderSummary();
 </script>
+
+<div id="mobileDetail">
+  <button id="mobileDetailClose" onclick="closeMobileDetail()">✕</button>
+  <div id="mobileDetailContent"></div>
+</div>
 </body>
 </html>
