@@ -7,6 +7,7 @@ export const translations = {
       about: "About",
       gallery: "Gallery",
       blog: "Blog",
+      fifa26: "FIFA 26",
     },
     home: {
       heading: "Hi, I'm Rafa",
@@ -65,6 +66,7 @@ export const translations = {
       about: "Sobre Mí",
       gallery: "Galería",
       blog: "Blog",
+      fifa26: "FIFA 26",
     },
     home: {
       heading: "Hola, soy Rafa",
