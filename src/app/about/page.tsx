@@ -20,7 +20,7 @@ export default function About() {
           className="inline-flex items-center gap-2 no-underline hover:opacity-80"
         >
           <Image
-            src="/letterboxd-icon.png"
+            src="/letterboxd-mac-icon.png"
             alt="Letterboxd"
             width={28}
             height={28}
