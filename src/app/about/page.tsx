@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function About() {
@@ -12,8 +13,20 @@ export default function About() {
       <p>{t.about.intro}</p>
 
       <p>
-        <a href="https://boxd.it/jOKqr" target="_blank" rel="noopener noreferrer">
-          {t.about.letterboxd}
+        <a
+          href="https://boxd.it/jOKqr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 no-underline hover:opacity-80"
+        >
+          <Image
+            src="/letterboxd-icon.png"
+            alt="Letterboxd"
+            width={28}
+            height={28}
+            className="rounded-lg not-prose"
+          />
+          <span>{t.about.letterboxd}</span>
         </a>
       </p>
 
